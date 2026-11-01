@@ -1,0 +1,23 @@
+name: Bug
+description: The CLI did something wrong or produced an invalid BOM.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Command you ran, what you expected, what you got.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: skillbom version and Python version
+      placeholder: "skillbom 0.0.1, Python 3.12"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Skills repository or minimal example
+      description: A public repo link, or the smallest SKILL.md that reproduces it. Don't paste private content.

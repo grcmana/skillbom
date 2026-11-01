@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skillbom"
+dynamic = ["version"]
+description = "A verifiable bill of materials for agent skills (CycloneDX profile + CLI)."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.9"
+authors = [{ name = "GRCMANA" }]
+keywords = ["sbom", "cyclonedx", "ai-bom", "agent-skills", "supply-chain", "claude-code"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+  "Topic :: Software Development :: Build Tools",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["cyclonedx-python-lib[json-validation]>=8"]
+
+[project.urls]
+Homepage = "https://skillbom.io"
+Repository = "https://github.com/grcmana/skillbom"
+Specification = "https://github.com/grcmana/skillbom/blob/main/SPEC.md"
+
+[project.scripts]
+skillbom = "skillbom.cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "skillbom.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

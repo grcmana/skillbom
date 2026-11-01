@@ -1,0 +1,69 @@
+name: release
+
+# Runs when a maintainer pushes a v* tag (tag creation is admin-only).
+# Builds the package, regenerates the example BOM, signs everything with
+# keyless GitHub artifact attestations (Sigstore), and publishes a release.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # create the GitHub release
+      id-token: write        # keyless signing via Sigstore
+      attestations: write    # store the attestation
+      artifact-metadata: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: grcmana/grcskills
+          ref: v0.1.0
+          path: _grcskills
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Test
+        run: |
+          pip install "cyclonedx-python-lib[json-validation]>=8" build
+          PYTHONPATH=src python -m unittest discover -s tests
+
+      - name: Check tag matches package version
+        run: |
+          v=$(PYTHONPATH=src python -c "import skillbom; print(skillbom.__version__)")
+          test "v$v" = "${GITHUB_REF_NAME}" || { echo "tag ${GITHUB_REF_NAME} != v$v"; exit 1; }
+
+      - name: Build package
+        run: python -m build --outdir dist
+
+      - name: Generate example Skill BOM (grcskills v0.1.0)
+        run: |
+          export SOURCE_DATE_EPOCH=$(git -C _grcskills log -1 --format=%ct)
+          PYTHONPATH=src python -m skillbom generate _grcskills \
+            --name grcskills --version v0.1.0 \
+            --repo-url https://github.com/grcmana/grcskills -o dist/grcskills-v0.1.0.cdx.json
+          diff -u examples/grcskills-v0.1.0.cdx.json dist/grcskills-v0.1.0.cdx.json
+          PYTHONPATH=src python -m skillbom check dist/grcskills-v0.1.0.cdx.json
+
+      - name: Sign (build provenance)
+        uses: actions/attest@v4
+        with:
+          subject-path: |
+            dist/*.whl
+            dist/*.tar.gz
+            dist/grcskills-v0.1.0.cdx.json
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" dist/* \
+            --title "${GITHUB_REF_NAME}" --generate-notes --prerelease

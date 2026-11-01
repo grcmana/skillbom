@@ -1,0 +1,23 @@
+name: Profile proposal
+description: Suggest a change or addition to the Skill BOM profile (SPEC.md).
+labels: [profile]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What can't a Skill BOM express today, and who needs it?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Which CycloneDX fields or skillbom properties, with an example.
+    validations:
+      required: true
+  - type: textarea
+    id: prior
+    attributes:
+      label: Related standards or tools
+      description: Does CycloneDX, SPDX, OWASP AgBOM or another tool already cover this?
