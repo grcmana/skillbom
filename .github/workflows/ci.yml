@@ -1,0 +1,62 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test (py${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install schema validator (tests only; the tool itself has no dependencies)
+        run: pip install "cyclonedx-python-lib[json-validation]>=8"
+      - name: Unit tests (includes CycloneDX 1.6 schema validation)
+        run: PYTHONPATH=src python -m unittest discover -s tests -v
+
+  example:
+    # The committed example must be reproducible byte-for-byte from the
+    # public grcskills release. Proves determinism across machines.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          repository: grcmana/grcskills
+          ref: v0.1.0
+          path: _grcskills
+          fetch-depth: 1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - run: pip install "cyclonedx-python-lib[json-validation]>=8"
+      - name: Regenerate example BOM
+        run: |
+          export SOURCE_DATE_EPOCH=$(git -C _grcskills log -1 --format=%ct)
+          PYTHONPATH=src python -m skillbom generate _grcskills \
+            --name grcskills --version v0.1.0 \
+            --repo-url https://github.com/grcmana/grcskills -o /tmp/regen.json
+          diff -u examples/grcskills-v0.1.0.cdx.json /tmp/regen.json
+      - name: Validate against the official CycloneDX 1.6 schema
+        run: |
+          python - <<'EOF'
+          from cyclonedx.schema import SchemaVersion
+          from cyclonedx.validation.json import JsonStrictValidator
+          err = JsonStrictValidator(SchemaVersion.V1_6).validate_str(open("examples/grcskills-v0.1.0.cdx.json").read())
+          raise SystemExit(f"invalid: {err}" if err else 0)
+          EOF
+      - name: Policy check
+        run: PYTHONPATH=src python -m skillbom check examples/grcskills-v0.1.0.cdx.json --today 2026-11-01
+      - name: Verify installed copy matches
+        run: PYTHONPATH=src python -m skillbom verify _grcskills/skills --bom examples/grcskills-v0.1.0.cdx.json --require-all

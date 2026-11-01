@@ -1,0 +1,2809 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:2a7cec8e-0d4d-52c1-9599-ad54a41dadbe",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-29T14:39:06Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "skillbom",
+          "version": "0.0.1",
+          "externalReferences": [
+            {
+              "type": "vcs",
+              "url": "https://github.com/grcmana/skillbom"
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "bom-ref": "subject",
+      "name": "grcskills",
+      "version": "v0.1.0",
+      "purl": "pkg:github/grcmana/grcskills@v0.1.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1e2c45ccffb0cd02b601eda9985f544ce39bf6b774d761959767e0d55ea2813b"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/grcmana/grcskills"
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "skillbom:profile",
+        "value": "0.1"
+      },
+      {
+        "name": "skillbom:hash-method",
+        "value": "sha256-manifest-v1"
+      },
+      {
+        "name": "skillbom:skill-count",
+        "value": "11"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "application",
+      "bom-ref": "skill:ai-impact-assessment",
+      "name": "ai-impact-assessment",
+      "version": "0.1.0",
+      "description": "Inventory AI systems and run AI risk and AI system impact assessments aligned to ISO/IEC 42001 (6.1.2, 6.1.4, Annex A.5) with GDPR DPIA triggers — covering AI in your product and staff use of AI tools. Use for \"AI risk assessment\", \"AI impact assessment\", \"ISO 42001\", \"AI governance\", \"is our AI feature risky\", \"AI inventory\", or before launching an AI feature.",
+      "authors": [
+        {
+          "name": "GRCMANA"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bd27daa37be8786f7330c9ec5d425f3e576fd74e7e6da47aaa52e65e070edf4a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "skill"
+        },
+        {
+          "name": "skillbom:path",
+          "value": "skills/ai-impact-assessment"
+        },
+        {
+          "name": "skillbom:hash-method",
+          "value": "sha256-manifest-v1"
+        },
+        {
+          "name": "skillbom:file-count",
+          "value": "6"
+        },
+        {
+          "name": "skillbom:has-scripts",
+          "value": "false"
+        },
+        {
+          "name": "skillbom:meta:collection",
+          "value": "risk-management"
+        },
+        {
+          "name": "skillbom:meta:frameworks",
+          "value": "ISO 42001, GDPR"
+        },
+        {
+          "name": "skillbom:meta:summary",
+          "value": "Inventories your AI and assesses its risks and impacts on people."
+        }
+      ],
+      "components": [
+        {
+          "type": "file",
+          "bom-ref": "skill:ai-impact-assessment/file:SKILL.md",
+          "name": "SKILL.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5c1b2efb66681ace41768528d68ba025e58fb9e0efc52e793e6e13b31f85b0d9"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "instructions"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4555"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:ai-impact-assessment/file:assets/ai-impact-assessment-template.md",
+          "name": "assets/ai-impact-assessment-template.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "760ae8a4f0df1b9c7add2f617663bec1f0ae92c83690c57bf69d65ca7af20b0c"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "asset"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "1852"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:ai-impact-assessment/file:references/gdpr.md",
+          "name": "references/gdpr.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "02495f6e71d3b2fa6204a4e6111dd4e6e485d0dae87e227e796850988a175a88"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4643"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:ai-impact-assessment/file:references/grc-workspace.md",
+          "name": "references/grc-workspace.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4b23ab723982702a236324ad39a8eee8c32c97d05036278f81674d989a0780a8"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2591"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:ai-impact-assessment/file:references/iso42001.md",
+          "name": "references/iso42001.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bf4d1d0d595229ba18cda69871c17f6528f58ad6abcf9973bddd6c170bbe792a"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4384"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:ai-impact-assessment/file:references/risk-methodology.md",
+          "name": "references/risk-methodology.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a3f7794ef6d23911aa24caa221b7bd363efa3397af583febb9b4be4e71f5fb6f"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "skill:audit-readiness",
+      "name": "audit-readiness",
+      "version": "0.1.0",
+      "description": "Run a readiness / gap assessment against ISO 27001, SOC 2, Cyber Essentials, GDPR or ISO 42001 — scoring each requirement, identifying gaps, estimating effort, and producing a prioritised remediation roadmap to Stage 1/Stage 2, Type I/Type II, or CE submission. Use for \"are we ready for our audit\", \"gap assessment\", \"readiness assessment\", \"how far are we from ISO 27001 / SOC 2\", or \"what do we need before the auditor arrives\".",
+      "authors": [
+        {
+          "name": "GRCMANA"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a81304faba5ca6d35c367af9fa55bf91c0a59865bdb1af94059a30dc50a0bcbf"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "skill"
+        },
+        {
+          "name": "skillbom:path",
+          "value": "skills/audit-readiness"
+        },
+        {
+          "name": "skillbom:hash-method",
+          "value": "sha256-manifest-v1"
+        },
+        {
+          "name": "skillbom:file-count",
+          "value": "9"
+        },
+        {
+          "name": "skillbom:has-scripts",
+          "value": "false"
+        },
+        {
+          "name": "skillbom:meta:collection",
+          "value": "audit-evidence"
+        },
+        {
+          "name": "skillbom:meta:frameworks",
+          "value": "all"
+        },
+        {
+          "name": "skillbom:meta:summary",
+          "value": "Scores how ready you are for audit and lays out the roadmap to get there."
+        }
+      ],
+      "components": [
+        {
+          "type": "file",
+          "bom-ref": "skill:audit-readiness/file:SKILL.md",
+          "name": "SKILL.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b78acc2005fabb54ec3d1e715fd5a53096a0310499a64cc88a0313ec719e4510"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "instructions"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4492"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:audit-readiness/file:references/crosswalk.md",
+          "name": "references/crosswalk.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "50af74fa485e6289d0f01ce3289f3fb416cf4f18a6a9dbb3e2b6e90634c6473b"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3024"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:audit-readiness/file:references/cyber-essentials.md",
+          "name": "references/cyber-essentials.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b433bcec49ea9f297b2d3d378b7980c02994e9ce5ad26cb23e7bccf405081d29"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4815"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:audit-readiness/file:references/evidence-standards.md",
+          "name": "references/evidence-standards.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bdd5f5a9f94ae38dd5453df3dabb00823cdbd89268de333fbc385e2ea6bdc4bd"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2599"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:audit-readiness/file:references/gdpr.md",
+          "name": "references/gdpr.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "02495f6e71d3b2fa6204a4e6111dd4e6e485d0dae87e227e796850988a175a88"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4643"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:audit-readiness/file:references/grc-workspace.md",
+          "name": "references/grc-workspace.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4b23ab723982702a236324ad39a8eee8c32c97d05036278f81674d989a0780a8"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2591"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:audit-readiness/file:references/iso27001.md",
+          "name": "references/iso27001.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1a8807b3dba3405496a4334039a5b06c9722f26be4316851959461dce0782a41"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "5182"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:audit-readiness/file:references/iso42001.md",
+          "name": "references/iso42001.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bf4d1d0d595229ba18cda69871c17f6528f58ad6abcf9973bddd6c170bbe792a"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4384"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:audit-readiness/file:references/soc2.md",
+          "name": "references/soc2.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "59ce901e1ffffba5a6f10378ba82f96d4ba9ea94c476922b33ee5b8b48bde432"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4178"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "skill:company-context",
+      "name": "company-context",
+      "version": "0.1.0",
+      "description": "Build or refresh the company GRC profile that every other GRC skill depends on — business model, data handled, tech stack, people, customer and regulatory drivers, scope, and recommended frameworks (ISO 27001, SOC 2, Cyber Essentials, GDPR, ISO 42001). Use when starting a compliance programme, onboarding to GRC, when a customer asks for a certification, or when the user says \"set up my company context\", \"which framework do we need\", or \"scope our ISMS\".",
+      "authors": [
+        {
+          "name": "GRCMANA"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bfa012afa66a2042aa418736a40e286653cc7271743d7770505d7ec024f8f19e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "skill"
+        },
+        {
+          "name": "skillbom:path",
+          "value": "skills/company-context"
+        },
+        {
+          "name": "skillbom:hash-method",
+          "value": "sha256-manifest-v1"
+        },
+        {
+          "name": "skillbom:file-count",
+          "value": "9"
+        },
+        {
+          "name": "skillbom:has-scripts",
+          "value": "false"
+        },
+        {
+          "name": "skillbom:meta:collection",
+          "value": "foundations"
+        },
+        {
+          "name": "skillbom:meta:frameworks",
+          "value": "all"
+        },
+        {
+          "name": "skillbom:meta:summary",
+          "value": "Builds the company profile, scope and framework choice every other skill reads."
+        }
+      ],
+      "components": [
+        {
+          "type": "file",
+          "bom-ref": "skill:company-context/file:SKILL.md",
+          "name": "SKILL.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "20cad2a37616302516d8834874d40b38f4e592abe64ff25edc2671889de8c6df"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "instructions"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "5235"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:company-context/file:assets/company-profile-template.md",
+          "name": "assets/company-profile-template.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "efb0274d3db37eb8d85e82c0285193daea0282221f009ee2e2061d7acfd30cbf"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "asset"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2042"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:company-context/file:references/crosswalk.md",
+          "name": "references/crosswalk.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "50af74fa485e6289d0f01ce3289f3fb416cf4f18a6a9dbb3e2b6e90634c6473b"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3024"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:company-context/file:references/cyber-essentials.md",
+          "name": "references/cyber-essentials.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b433bcec49ea9f297b2d3d378b7980c02994e9ce5ad26cb23e7bccf405081d29"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4815"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:company-context/file:references/gdpr.md",
+          "name": "references/gdpr.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "02495f6e71d3b2fa6204a4e6111dd4e6e485d0dae87e227e796850988a175a88"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4643"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:company-context/file:references/grc-workspace.md",
+          "name": "references/grc-workspace.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4b23ab723982702a236324ad39a8eee8c32c97d05036278f81674d989a0780a8"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2591"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:company-context/file:references/iso27001.md",
+          "name": "references/iso27001.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1a8807b3dba3405496a4334039a5b06c9722f26be4316851959461dce0782a41"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "5182"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:company-context/file:references/iso42001.md",
+          "name": "references/iso42001.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bf4d1d0d595229ba18cda69871c17f6528f58ad6abcf9973bddd6c170bbe792a"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4384"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:company-context/file:references/soc2.md",
+          "name": "references/soc2.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "59ce901e1ffffba5a6f10378ba82f96d4ba9ea94c476922b33ee5b8b48bde432"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4178"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "skill:cyber-essentials-scoping",
+      "name": "cyber-essentials-scoping",
+      "version": "0.1.0",
+      "description": "Scope and pre-assess a UK Cyber Essentials / Cyber Essentials Plus certification (Requirements v3.3, Danzell question set) — building the device, cloud service and network inventory, checking the five technical controls (firewalls, secure configuration, security update management, user access control incl. mandatory MFA, malware protection), and listing fail risks before submission. Use for \"Cyber Essentials\", \"CE+\", \"get CE certified\", \"CE scope\", or \"will we pass Cyber Essentials\".",
+      "authors": [
+        {
+          "name": "GRCMANA"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "97ff4a600f05130a0323fdd07f4db6a862dd0db9139d59da60ad67556c2511c5"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "skill"
+        },
+        {
+          "name": "skillbom:path",
+          "value": "skills/cyber-essentials-scoping"
+        },
+        {
+          "name": "skillbom:hash-method",
+          "value": "sha256-manifest-v1"
+        },
+        {
+          "name": "skillbom:file-count",
+          "value": "4"
+        },
+        {
+          "name": "skillbom:has-scripts",
+          "value": "false"
+        },
+        {
+          "name": "skillbom:meta:collection",
+          "value": "frameworks"
+        },
+        {
+          "name": "skillbom:meta:frameworks",
+          "value": "Cyber Essentials"
+        },
+        {
+          "name": "skillbom:meta:summary",
+          "value": "Scopes Cyber Essentials and finds the hard fails before you submit."
+        }
+      ],
+      "components": [
+        {
+          "type": "file",
+          "bom-ref": "skill:cyber-essentials-scoping/file:SKILL.md",
+          "name": "SKILL.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "e3763826a16f928ee02a16f0d63a6b88203166979008a6cdb315fac4a259efed"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "instructions"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4284"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:cyber-essentials-scoping/file:assets/ce-scope-template.md",
+          "name": "assets/ce-scope-template.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "fbefb9c7b3a4e81f3e552c46785b79560be149f555d7116822f2e39949b7edbf"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "asset"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "1507"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:cyber-essentials-scoping/file:references/cyber-essentials.md",
+          "name": "references/cyber-essentials.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b433bcec49ea9f297b2d3d378b7980c02994e9ce5ad26cb23e7bccf405081d29"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4815"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:cyber-essentials-scoping/file:references/grc-workspace.md",
+          "name": "references/grc-workspace.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4b23ab723982702a236324ad39a8eee8c32c97d05036278f81674d989a0780a8"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2591"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "skill:dpia",
+      "name": "dpia",
+      "version": "0.1.0",
+      "description": "Screen for and draft a GDPR Data Protection Impact Assessment (Art. 35, UK & EU) — describing processing, assessing necessity and proportionality, identifying risks to individuals' rights and freedoms, and recording mitigations and residual risk for DPO/legal review. Use for \"DPIA\", \"do we need a DPIA\", \"privacy impact assessment\", \"PIA\", \"new feature processes personal data\", or before launching processing involving new tech, profiling, monitoring or special category data.",
+      "authors": [
+        {
+          "name": "GRCMANA"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0e16275d8e541e35acdf31263e97e11524d18d1fe32954c7c8e1c7c0925050a7"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "skill"
+        },
+        {
+          "name": "skillbom:path",
+          "value": "skills/dpia"
+        },
+        {
+          "name": "skillbom:hash-method",
+          "value": "sha256-manifest-v1"
+        },
+        {
+          "name": "skillbom:file-count",
+          "value": "5"
+        },
+        {
+          "name": "skillbom:has-scripts",
+          "value": "false"
+        },
+        {
+          "name": "skillbom:meta:collection",
+          "value": "frameworks"
+        },
+        {
+          "name": "skillbom:meta:frameworks",
+          "value": "GDPR"
+        },
+        {
+          "name": "skillbom:meta:summary",
+          "value": "Screens for and drafts a GDPR data protection impact assessment."
+        }
+      ],
+      "components": [
+        {
+          "type": "file",
+          "bom-ref": "skill:dpia/file:SKILL.md",
+          "name": "SKILL.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "fa61a933ebfb2513f1501e4d87a526d59b215d45527a600cda806a29dc0bab05"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "instructions"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4514"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:dpia/file:assets/dpia-template.md",
+          "name": "assets/dpia-template.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "9870ab897e939d80944e42ac8ec6757df472b9783bde4ddc938d59b82fa7019a"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "asset"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "1705"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:dpia/file:references/gdpr.md",
+          "name": "references/gdpr.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "02495f6e71d3b2fa6204a4e6111dd4e6e485d0dae87e227e796850988a175a88"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4643"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:dpia/file:references/grc-workspace.md",
+          "name": "references/grc-workspace.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4b23ab723982702a236324ad39a8eee8c32c97d05036278f81674d989a0780a8"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2591"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:dpia/file:references/risk-methodology.md",
+          "name": "references/risk-methodology.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a3f7794ef6d23911aa24caa221b7bd363efa3397af583febb9b4be4e71f5fb6f"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "skill:evidence-request-list",
+      "name": "evidence-request-list",
+      "version": "0.1.0",
+      "description": "Generate a deduplicated, control-mapped evidence request list and evidence tracker (CSV) for ISO 27001, SOC 2, Cyber Essentials Plus, GDPR and ISO 42001 — with owners, source systems, frequency and due dates, so one artefact satisfies multiple frameworks. Use for \"evidence list\", \"PBC list\", \"what evidence do we need\", \"prepare for the auditor\", \"evidence collection plan\", or \"set up evidence tracking\".",
+      "authors": [
+        {
+          "name": "GRCMANA"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "41c131823b38b5547848b6ccaa32557d6fddf25b8b6c421d1036b93d16cd98a0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "skill"
+        },
+        {
+          "name": "skillbom:path",
+          "value": "skills/evidence-request-list"
+        },
+        {
+          "name": "skillbom:hash-method",
+          "value": "sha256-manifest-v1"
+        },
+        {
+          "name": "skillbom:file-count",
+          "value": "10"
+        },
+        {
+          "name": "skillbom:has-scripts",
+          "value": "false"
+        },
+        {
+          "name": "skillbom:meta:collection",
+          "value": "audit-evidence"
+        },
+        {
+          "name": "skillbom:meta:frameworks",
+          "value": "all"
+        },
+        {
+          "name": "skillbom:meta:summary",
+          "value": "Plans what evidence to collect, from which system, by whom and when."
+        }
+      ],
+      "components": [
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-request-list/file:SKILL.md",
+          "name": "SKILL.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "675d73d185fb861855bc2cc6841bdbcb58c93b6b8d173bca2fa78e2be90fb3a9"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "instructions"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3641"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-request-list/file:assets/evidence-tracker-template.csv",
+          "name": "assets/evidence-tracker-template.csv",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1ec5f8a8a5f0be47118be87ae532796518355a8ddf1864d34e331e22ede4e12a"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "asset"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "195"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-request-list/file:references/crosswalk.md",
+          "name": "references/crosswalk.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "50af74fa485e6289d0f01ce3289f3fb416cf4f18a6a9dbb3e2b6e90634c6473b"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3024"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-request-list/file:references/cyber-essentials.md",
+          "name": "references/cyber-essentials.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b433bcec49ea9f297b2d3d378b7980c02994e9ce5ad26cb23e7bccf405081d29"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4815"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-request-list/file:references/evidence-standards.md",
+          "name": "references/evidence-standards.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bdd5f5a9f94ae38dd5453df3dabb00823cdbd89268de333fbc385e2ea6bdc4bd"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2599"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-request-list/file:references/gdpr.md",
+          "name": "references/gdpr.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "02495f6e71d3b2fa6204a4e6111dd4e6e485d0dae87e227e796850988a175a88"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4643"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-request-list/file:references/grc-workspace.md",
+          "name": "references/grc-workspace.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4b23ab723982702a236324ad39a8eee8c32c97d05036278f81674d989a0780a8"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2591"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-request-list/file:references/iso27001.md",
+          "name": "references/iso27001.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1a8807b3dba3405496a4334039a5b06c9722f26be4316851959461dce0782a41"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "5182"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-request-list/file:references/iso42001.md",
+          "name": "references/iso42001.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bf4d1d0d595229ba18cda69871c17f6528f58ad6abcf9973bddd6c170bbe792a"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4384"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-request-list/file:references/soc2.md",
+          "name": "references/soc2.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "59ce901e1ffffba5a6f10378ba82f96d4ba9ea94c476922b33ee5b8b48bde432"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4178"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "skill:evidence-review",
+      "name": "evidence-review",
+      "version": "0.1.0",
+      "description": "Review collected audit evidence (exports, screenshots, tickets, documents) for relevance, completeness, dating, attribution and authenticity before the auditor sees it — rating quality, flagging gaps and sensitive data, and updating the evidence tracker. Use for \"review this evidence\", \"is this good enough for the auditor\", \"check our evidence\", \"pre-audit evidence QA\", or \"will this screenshot pass\".",
+      "authors": [
+        {
+          "name": "GRCMANA"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1934c757bf5964433e29cf5fbc19c5e0ad6409d556b30cd9fc9fa76eb6d1c8e6"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "skill"
+        },
+        {
+          "name": "skillbom:path",
+          "value": "skills/evidence-review"
+        },
+        {
+          "name": "skillbom:hash-method",
+          "value": "sha256-manifest-v1"
+        },
+        {
+          "name": "skillbom:file-count",
+          "value": "4"
+        },
+        {
+          "name": "skillbom:has-scripts",
+          "value": "false"
+        },
+        {
+          "name": "skillbom:meta:collection",
+          "value": "audit-evidence"
+        },
+        {
+          "name": "skillbom:meta:frameworks",
+          "value": "all"
+        },
+        {
+          "name": "skillbom:meta:summary",
+          "value": "Checks collected evidence before your auditor sees it."
+        }
+      ],
+      "components": [
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-review/file:SKILL.md",
+          "name": "SKILL.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "0112c2838c2de8ec9e23e65461fa09a06b7bdbe840b79bc7af934af515c41b4f"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "instructions"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3374"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-review/file:references/crosswalk.md",
+          "name": "references/crosswalk.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "50af74fa485e6289d0f01ce3289f3fb416cf4f18a6a9dbb3e2b6e90634c6473b"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3024"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-review/file:references/evidence-standards.md",
+          "name": "references/evidence-standards.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bdd5f5a9f94ae38dd5453df3dabb00823cdbd89268de333fbc385e2ea6bdc4bd"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2599"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:evidence-review/file:references/grc-workspace.md",
+          "name": "references/grc-workspace.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4b23ab723982702a236324ad39a8eee8c32c97d05036278f81674d989a0780a8"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2591"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "skill:grc-status",
+      "name": "grc-status",
+      "version": "0.1.0",
+      "description": "Roll up the GRC workspace (risk register, policies, evidence tracker, readiness assessments, run logs) into a one-page programme status for leadership or the board — progress per framework, top risks, overdue actions, decisions needed, and next 30 days. Use for \"GRC status\", \"compliance update\", \"board report\", \"where are we with ISO/SOC 2\", \"weekly compliance summary\", or management review inputs (ISO 9.3).",
+      "authors": [
+        {
+          "name": "GRCMANA"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "929cbed8f065897affda0034dcc86d1d0863667da05e5b3cd4f09e420542cd37"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "skill"
+        },
+        {
+          "name": "skillbom:path",
+          "value": "skills/grc-status"
+        },
+        {
+          "name": "skillbom:hash-method",
+          "value": "sha256-manifest-v1"
+        },
+        {
+          "name": "skillbom:file-count",
+          "value": "4"
+        },
+        {
+          "name": "skillbom:has-scripts",
+          "value": "false"
+        },
+        {
+          "name": "skillbom:meta:collection",
+          "value": "foundations"
+        },
+        {
+          "name": "skillbom:meta:frameworks",
+          "value": "all"
+        },
+        {
+          "name": "skillbom:meta:summary",
+          "value": "Turns your workspace into a one-page status, board report or management review pack."
+        }
+      ],
+      "components": [
+        {
+          "type": "file",
+          "bom-ref": "skill:grc-status/file:SKILL.md",
+          "name": "SKILL.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "c8465cb30a8ee8c93dd67e0b996d2b747622694a0a67b13e9bf6fd54d703ed92"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "instructions"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3288"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:grc-status/file:references/evidence-standards.md",
+          "name": "references/evidence-standards.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bdd5f5a9f94ae38dd5453df3dabb00823cdbd89268de333fbc385e2ea6bdc4bd"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2599"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:grc-status/file:references/grc-workspace.md",
+          "name": "references/grc-workspace.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4b23ab723982702a236324ad39a8eee8c32c97d05036278f81674d989a0780a8"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2591"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:grc-status/file:references/risk-methodology.md",
+          "name": "references/risk-methodology.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a3f7794ef6d23911aa24caa221b7bd363efa3397af583febb9b4be4e71f5fb6f"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "skill:policy-gap-review",
+      "name": "policy-gap-review",
+      "version": "0.1.0",
+      "description": "Review existing policies against ISO 27001, SOC 2, Cyber Essentials, GDPR and ISO 42001 requirements and auditor expectations — flagging missing coverage, untestable statements, unkeepable commitments, missing document control, and contradictions with actual practice. Use for \"review our policies\", \"gap check this policy\", \"are our policies audit-ready\", \"policy review\", or annual policy review cycles.",
+      "authors": [
+        {
+          "name": "GRCMANA"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "53dfaf46c1f81974fae79d74f935deeef72b2669bae7e279db71dda6dfc804b7"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "skill"
+        },
+        {
+          "name": "skillbom:path",
+          "value": "skills/policy-gap-review"
+        },
+        {
+          "name": "skillbom:hash-method",
+          "value": "sha256-manifest-v1"
+        },
+        {
+          "name": "skillbom:file-count",
+          "value": "10"
+        },
+        {
+          "name": "skillbom:has-scripts",
+          "value": "false"
+        },
+        {
+          "name": "skillbom:meta:collection",
+          "value": "policy-management"
+        },
+        {
+          "name": "skillbom:meta:frameworks",
+          "value": "all"
+        },
+        {
+          "name": "skillbom:meta:summary",
+          "value": "Reviews your existing policies the way an auditor would."
+        }
+      ],
+      "components": [
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-gap-review/file:SKILL.md",
+          "name": "SKILL.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f41699aa88bc51b2620b302ec8d68cd12010fed54096aa2030f7c28887249765"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "instructions"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4292"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-gap-review/file:references/crosswalk.md",
+          "name": "references/crosswalk.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "50af74fa485e6289d0f01ce3289f3fb416cf4f18a6a9dbb3e2b6e90634c6473b"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3024"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-gap-review/file:references/cyber-essentials.md",
+          "name": "references/cyber-essentials.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b433bcec49ea9f297b2d3d378b7980c02994e9ce5ad26cb23e7bccf405081d29"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4815"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-gap-review/file:references/gdpr.md",
+          "name": "references/gdpr.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "02495f6e71d3b2fa6204a4e6111dd4e6e485d0dae87e227e796850988a175a88"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4643"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-gap-review/file:references/grc-workspace.md",
+          "name": "references/grc-workspace.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4b23ab723982702a236324ad39a8eee8c32c97d05036278f81674d989a0780a8"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2591"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-gap-review/file:references/iso27001.md",
+          "name": "references/iso27001.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1a8807b3dba3405496a4334039a5b06c9722f26be4316851959461dce0782a41"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "5182"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-gap-review/file:references/iso42001.md",
+          "name": "references/iso42001.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bf4d1d0d595229ba18cda69871c17f6528f58ad6abcf9973bddd6c170bbe792a"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4384"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-gap-review/file:references/policy-catalogue.md",
+          "name": "references/policy-catalogue.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5e50d1f6341506b239d26b3f1a8d19c74b6656e54dac9669c24cfcc233318ec0"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3497"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-gap-review/file:references/soc2.md",
+          "name": "references/soc2.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "59ce901e1ffffba5a6f10378ba82f96d4ba9ea94c476922b33ee5b8b48bde432"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4178"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-gap-review/file:references/writing-standards.md",
+          "name": "references/writing-standards.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "47872a0f90dbec6b4edf4bda83003c774548a141cf0c860c614d8fe729fbd8e9"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2099"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "skill:policy-writer",
+      "name": "policy-writer",
+      "version": "0.1.0",
+      "description": "Recommend the minimum viable policy set for your selected frameworks and draft tailored, testable, auditor-ready information security, privacy and AI policies (ISO 27001, SOC 2, Cyber Essentials, GDPR, ISO 42001) from company context. Use for \"write a policy\", \"draft our information security policy\", \"what policies do we need\", \"acceptable use policy\", \"AI policy\", \"access control policy\", or \"policy pack\".",
+      "authors": [
+        {
+          "name": "GRCMANA"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5228d5832dad54041839a7dd891831066bac64fc2f0580929baace855fd4ea57"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "skill"
+        },
+        {
+          "name": "skillbom:path",
+          "value": "skills/policy-writer"
+        },
+        {
+          "name": "skillbom:hash-method",
+          "value": "sha256-manifest-v1"
+        },
+        {
+          "name": "skillbom:file-count",
+          "value": "11"
+        },
+        {
+          "name": "skillbom:has-scripts",
+          "value": "false"
+        },
+        {
+          "name": "skillbom:meta:collection",
+          "value": "policy-management"
+        },
+        {
+          "name": "skillbom:meta:frameworks",
+          "value": "all"
+        },
+        {
+          "name": "skillbom:meta:summary",
+          "value": "Recommends the policies you actually need and drafts them for your stack."
+        }
+      ],
+      "components": [
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-writer/file:SKILL.md",
+          "name": "SKILL.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "34a559963e3d11a6d498c7a859d764b1b37c3d826cd5b9ce10e1e8ef0bce43d0"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "instructions"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4208"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-writer/file:assets/policy-template.md",
+          "name": "assets/policy-template.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "213abce6aec253590a02d0f3666582e96297325cfd5b47c647ab7eb50fc298ce"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "asset"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "1469"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-writer/file:references/crosswalk.md",
+          "name": "references/crosswalk.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "50af74fa485e6289d0f01ce3289f3fb416cf4f18a6a9dbb3e2b6e90634c6473b"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3024"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-writer/file:references/cyber-essentials.md",
+          "name": "references/cyber-essentials.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "b433bcec49ea9f297b2d3d378b7980c02994e9ce5ad26cb23e7bccf405081d29"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4815"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-writer/file:references/gdpr.md",
+          "name": "references/gdpr.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "02495f6e71d3b2fa6204a4e6111dd4e6e485d0dae87e227e796850988a175a88"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4643"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-writer/file:references/grc-workspace.md",
+          "name": "references/grc-workspace.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4b23ab723982702a236324ad39a8eee8c32c97d05036278f81674d989a0780a8"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2591"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-writer/file:references/iso27001.md",
+          "name": "references/iso27001.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "1a8807b3dba3405496a4334039a5b06c9722f26be4316851959461dce0782a41"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "5182"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-writer/file:references/iso42001.md",
+          "name": "references/iso42001.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "bf4d1d0d595229ba18cda69871c17f6528f58ad6abcf9973bddd6c170bbe792a"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4384"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-writer/file:references/policy-catalogue.md",
+          "name": "references/policy-catalogue.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "5e50d1f6341506b239d26b3f1a8d19c74b6656e54dac9669c24cfcc233318ec0"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3497"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-writer/file:references/soc2.md",
+          "name": "references/soc2.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "59ce901e1ffffba5a6f10378ba82f96d4ba9ea94c476922b33ee5b8b48bde432"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4178"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:policy-writer/file:references/writing-standards.md",
+          "name": "references/writing-standards.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "47872a0f90dbec6b4edf4bda83003c774548a141cf0c860c614d8fe729fbd8e9"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2099"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "skill:risk-register",
+      "name": "risk-register",
+      "version": "0.1.0",
+      "description": "Identify, assess, treat and review information security, privacy, third-party and AI risks using a documented 5x5 methodology, producing an audit-ready risk register (CSV) and treatment plan mapped to ISO 27001, SOC 2, GDPR and ISO 42001 controls. Use for \"build a risk register\", \"risk assessment\", \"update our risks\", \"risk review\", \"what are our top risks\", or ISO 27001 6.1.2/6.1.3 and SOC 2 CC3 work.",
+      "authors": [
+        {
+          "name": "GRCMANA"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "117a540f7c4aa2f6ed4fc550950e4526ecac67e48b9586cfa35a2ef835147225"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "skill"
+        },
+        {
+          "name": "skillbom:path",
+          "value": "skills/risk-register"
+        },
+        {
+          "name": "skillbom:hash-method",
+          "value": "sha256-manifest-v1"
+        },
+        {
+          "name": "skillbom:file-count",
+          "value": "5"
+        },
+        {
+          "name": "skillbom:has-scripts",
+          "value": "false"
+        },
+        {
+          "name": "skillbom:meta:collection",
+          "value": "risk-management"
+        },
+        {
+          "name": "skillbom:meta:frameworks",
+          "value": "all"
+        },
+        {
+          "name": "skillbom:meta:summary",
+          "value": "Identifies, scores and treats your risks, with each treatment mapped to controls."
+        }
+      ],
+      "components": [
+        {
+          "type": "file",
+          "bom-ref": "skill:risk-register/file:SKILL.md",
+          "name": "SKILL.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "f65c15c0b7759f111088d5580750cde71e5e792b3425d85f76b3ba605dd01787"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "instructions"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "4974"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:risk-register/file:assets/risk-register-template.csv",
+          "name": "assets/risk-register-template.csv",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "6b66a792682c35e36ad88c036d1ba40400c905c54ff581c7cadf5f19cdbe0575"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "asset"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "301"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:risk-register/file:references/crosswalk.md",
+          "name": "references/crosswalk.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "50af74fa485e6289d0f01ce3289f3fb416cf4f18a6a9dbb3e2b6e90634c6473b"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3024"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:risk-register/file:references/grc-workspace.md",
+          "name": "references/grc-workspace.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "4b23ab723982702a236324ad39a8eee8c32c97d05036278f81674d989a0780a8"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "2591"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "bom-ref": "skill:risk-register/file:references/risk-methodology.md",
+          "name": "references/risk-methodology.md",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "a3f7794ef6d23911aa24caa221b7bd363efa3397af583febb9b4be4e71f5fb6f"
+            }
+          ],
+          "properties": [
+            {
+              "name": "skillbom:role",
+              "value": "reference"
+            },
+            {
+              "name": "skillbom:size",
+              "value": "3517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "data",
+      "bom-ref": "knowledge:crosswalk@sha256:50af74fa485e",
+      "name": "crosswalk",
+      "description": "Domain-level crosswalk — ISO 27001 · SOC 2 · Cyber Essentials · GDPR · ISO 42001",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "50af74fa485e6289d0f01ce3289f3fb416cf4f18a6a9dbb3e2b6e90634c6473b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "knowledge"
+        },
+        {
+          "name": "skillbom:filename",
+          "value": "crosswalk.md"
+        },
+        {
+          "name": "skillbom:as-of",
+          "value": "2026-10-29"
+        }
+      ]
+    },
+    {
+      "type": "data",
+      "bom-ref": "knowledge:cyber-essentials@sha256:b433bcec49ea",
+      "name": "cyber-essentials",
+      "description": "Cyber Essentials / Cyber Essentials Plus (UK)",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b433bcec49ea9f297b2d3d378b7980c02994e9ce5ad26cb23e7bccf405081d29"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "knowledge"
+        },
+        {
+          "name": "skillbom:filename",
+          "value": "cyber-essentials.md"
+        },
+        {
+          "name": "skillbom:as-of",
+          "value": "2026-10-29"
+        },
+        {
+          "name": "skillbom:knowledge:scheme-version",
+          "value": "Requirements for IT Infrastructure v3.3, \"Danzell\" question set (for assessment accounts created from 27 April 2026)"
+        },
+        {
+          "name": "skillbom:knowledge:licence-note",
+          "value": "Own-words summary. Always check the current requirements document and question set on the IASME/NCSC websites — the scheme updates annually (usually April)."
+        }
+      ]
+    },
+    {
+      "type": "data",
+      "bom-ref": "knowledge:evidence-standards@sha256:bdd5f5a9f94a",
+      "name": "evidence-standards",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bdd5f5a9f94ae38dd5453df3dabb00823cdbd89268de333fbc385e2ea6bdc4bd"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "knowledge"
+        },
+        {
+          "name": "skillbom:filename",
+          "value": "evidence-standards.md"
+        }
+      ]
+    },
+    {
+      "type": "data",
+      "bom-ref": "knowledge:gdpr@sha256:02495f6e71d3",
+      "name": "gdpr",
+      "description": "EU GDPR (Regulation (EU) 2016/679) and UK GDPR + Data Protection Act 2018",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "02495f6e71d3b2fa6204a4e6111dd4e6e485d0dae87e227e796850988a175a88"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "knowledge"
+        },
+        {
+          "name": "skillbom:filename",
+          "value": "gdpr.md"
+        },
+        {
+          "name": "skillbom:as-of",
+          "value": "2026-10-29"
+        },
+        {
+          "name": "skillbom:knowledge:licence-note",
+          "value": "GDPR is EU law; article references used. Not legal advice."
+        }
+      ]
+    },
+    {
+      "type": "data",
+      "bom-ref": "knowledge:grc-workspace@sha256:4b23ab723982",
+      "name": "grc-workspace",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4b23ab723982702a236324ad39a8eee8c32c97d05036278f81674d989a0780a8"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "knowledge"
+        },
+        {
+          "name": "skillbom:filename",
+          "value": "grc-workspace.md"
+        }
+      ]
+    },
+    {
+      "type": "data",
+      "bom-ref": "knowledge:iso27001@sha256:1a8807b3dba3",
+      "name": "iso27001",
+      "description": "ISO/IEC 27001:2022 (incl. Amendment 1:2024)",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1a8807b3dba3405496a4334039a5b06c9722f26be4316851959461dce0782a41"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "knowledge"
+        },
+        {
+          "name": "skillbom:filename",
+          "value": "iso27001.md"
+        },
+        {
+          "name": "skillbom:as-of",
+          "value": "2026-10-29"
+        },
+        {
+          "name": "skillbom:knowledge:licence-note",
+          "value": "Own-words summary. Clause/control IDs referenced; no standard text reproduced. Buy the standard from ISO or your national body (e.g. BSI) for formal work."
+        }
+      ]
+    },
+    {
+      "type": "data",
+      "bom-ref": "knowledge:iso42001@sha256:bf4d1d0d5952",
+      "name": "iso42001",
+      "description": "ISO/IEC 42001:2023",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bf4d1d0d595229ba18cda69871c17f6528f58ad6abcf9973bddd6c170bbe792a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "knowledge"
+        },
+        {
+          "name": "skillbom:filename",
+          "value": "iso42001.md"
+        },
+        {
+          "name": "skillbom:as-of",
+          "value": "2026-10-29"
+        },
+        {
+          "name": "skillbom:knowledge:licence-note",
+          "value": "Own-words summary. Clause/control IDs referenced; no standard text reproduced."
+        }
+      ]
+    },
+    {
+      "type": "data",
+      "bom-ref": "knowledge:policy-catalogue@sha256:5e50d1f63415",
+      "name": "policy-catalogue",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5e50d1f6341506b239d26b3f1a8d19c74b6656e54dac9669c24cfcc233318ec0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "knowledge"
+        },
+        {
+          "name": "skillbom:filename",
+          "value": "policy-catalogue.md"
+        }
+      ]
+    },
+    {
+      "type": "data",
+      "bom-ref": "knowledge:risk-methodology@sha256:a3f7794ef6d2",
+      "name": "risk-methodology",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a3f7794ef6d23911aa24caa221b7bd363efa3397af583febb9b4be4e71f5fb6f"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "knowledge"
+        },
+        {
+          "name": "skillbom:filename",
+          "value": "risk-methodology.md"
+        }
+      ]
+    },
+    {
+      "type": "data",
+      "bom-ref": "knowledge:soc2@sha256:59ce901e1fff",
+      "name": "soc2",
+      "description": "SOC 2 (AICPA Trust Services Criteria 2017, with revised points of focus 2022)",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "59ce901e1ffffba5a6f10378ba82f96d4ba9ea94c476922b33ee5b8b48bde432"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "knowledge"
+        },
+        {
+          "name": "skillbom:filename",
+          "value": "soc2.md"
+        },
+        {
+          "name": "skillbom:as-of",
+          "value": "2026-10-29"
+        },
+        {
+          "name": "skillbom:knowledge:licence-note",
+          "value": "Own-words summary. Criteria IDs referenced; AICPA text not reproduced."
+        }
+      ]
+    },
+    {
+      "type": "data",
+      "bom-ref": "knowledge:writing-standards@sha256:47872a0f90db",
+      "name": "writing-standards",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "47872a0f90dbec6b4edf4bda83003c774548a141cf0c860c614d8fe729fbd8e9"
+        }
+      ],
+      "properties": [
+        {
+          "name": "skillbom:kind",
+          "value": "knowledge"
+        },
+        {
+          "name": "skillbom:filename",
+          "value": "writing-standards.md"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "subject",
+      "dependsOn": [
+        "skill:ai-impact-assessment",
+        "skill:audit-readiness",
+        "skill:company-context",
+        "skill:cyber-essentials-scoping",
+        "skill:dpia",
+        "skill:evidence-request-list",
+        "skill:evidence-review",
+        "skill:grc-status",
+        "skill:policy-gap-review",
+        "skill:policy-writer",
+        "skill:risk-register"
+      ]
+    },
+    {
+      "ref": "skill:ai-impact-assessment",
+      "dependsOn": [
+        "knowledge:gdpr@sha256:02495f6e71d3",
+        "knowledge:grc-workspace@sha256:4b23ab723982",
+        "knowledge:iso42001@sha256:bf4d1d0d5952",
+        "knowledge:risk-methodology@sha256:a3f7794ef6d2"
+      ]
+    },
+    {
+      "ref": "skill:audit-readiness",
+      "dependsOn": [
+        "knowledge:crosswalk@sha256:50af74fa485e",
+        "knowledge:cyber-essentials@sha256:b433bcec49ea",
+        "knowledge:evidence-standards@sha256:bdd5f5a9f94a",
+        "knowledge:gdpr@sha256:02495f6e71d3",
+        "knowledge:grc-workspace@sha256:4b23ab723982",
+        "knowledge:iso27001@sha256:1a8807b3dba3",
+        "knowledge:iso42001@sha256:bf4d1d0d5952",
+        "knowledge:soc2@sha256:59ce901e1fff"
+      ]
+    },
+    {
+      "ref": "skill:company-context",
+      "dependsOn": [
+        "knowledge:crosswalk@sha256:50af74fa485e",
+        "knowledge:cyber-essentials@sha256:b433bcec49ea",
+        "knowledge:gdpr@sha256:02495f6e71d3",
+        "knowledge:grc-workspace@sha256:4b23ab723982",
+        "knowledge:iso27001@sha256:1a8807b3dba3",
+        "knowledge:iso42001@sha256:bf4d1d0d5952",
+        "knowledge:soc2@sha256:59ce901e1fff"
+      ]
+    },
+    {
+      "ref": "skill:cyber-essentials-scoping",
+      "dependsOn": [
+        "knowledge:cyber-essentials@sha256:b433bcec49ea",
+        "knowledge:grc-workspace@sha256:4b23ab723982"
+      ]
+    },
+    {
+      "ref": "skill:dpia",
+      "dependsOn": [
+        "knowledge:gdpr@sha256:02495f6e71d3",
+        "knowledge:grc-workspace@sha256:4b23ab723982",
+        "knowledge:risk-methodology@sha256:a3f7794ef6d2"
+      ]
+    },
+    {
+      "ref": "skill:evidence-request-list",
+      "dependsOn": [
+        "knowledge:crosswalk@sha256:50af74fa485e",
+        "knowledge:cyber-essentials@sha256:b433bcec49ea",
+        "knowledge:evidence-standards@sha256:bdd5f5a9f94a",
+        "knowledge:gdpr@sha256:02495f6e71d3",
+        "knowledge:grc-workspace@sha256:4b23ab723982",
+        "knowledge:iso27001@sha256:1a8807b3dba3",
+        "knowledge:iso42001@sha256:bf4d1d0d5952",
+        "knowledge:soc2@sha256:59ce901e1fff"
+      ]
+    },
+    {
+      "ref": "skill:evidence-review",
+      "dependsOn": [
+        "knowledge:crosswalk@sha256:50af74fa485e",
+        "knowledge:evidence-standards@sha256:bdd5f5a9f94a",
+        "knowledge:grc-workspace@sha256:4b23ab723982"
+      ]
+    },
+    {
+      "ref": "skill:grc-status",
+      "dependsOn": [
+        "knowledge:evidence-standards@sha256:bdd5f5a9f94a",
+        "knowledge:grc-workspace@sha256:4b23ab723982",
+        "knowledge:risk-methodology@sha256:a3f7794ef6d2"
+      ]
+    },
+    {
+      "ref": "skill:policy-gap-review",
+      "dependsOn": [
+        "knowledge:crosswalk@sha256:50af74fa485e",
+        "knowledge:cyber-essentials@sha256:b433bcec49ea",
+        "knowledge:gdpr@sha256:02495f6e71d3",
+        "knowledge:grc-workspace@sha256:4b23ab723982",
+        "knowledge:iso27001@sha256:1a8807b3dba3",
+        "knowledge:iso42001@sha256:bf4d1d0d5952",
+        "knowledge:policy-catalogue@sha256:5e50d1f63415",
+        "knowledge:soc2@sha256:59ce901e1fff",
+        "knowledge:writing-standards@sha256:47872a0f90db"
+      ]
+    },
+    {
+      "ref": "skill:policy-writer",
+      "dependsOn": [
+        "knowledge:crosswalk@sha256:50af74fa485e",
+        "knowledge:cyber-essentials@sha256:b433bcec49ea",
+        "knowledge:gdpr@sha256:02495f6e71d3",
+        "knowledge:grc-workspace@sha256:4b23ab723982",
+        "knowledge:iso27001@sha256:1a8807b3dba3",
+        "knowledge:iso42001@sha256:bf4d1d0d5952",
+        "knowledge:policy-catalogue@sha256:5e50d1f63415",
+        "knowledge:soc2@sha256:59ce901e1fff",
+        "knowledge:writing-standards@sha256:47872a0f90db"
+      ]
+    },
+    {
+      "ref": "skill:risk-register",
+      "dependsOn": [
+        "knowledge:crosswalk@sha256:50af74fa485e",
+        "knowledge:grc-workspace@sha256:4b23ab723982",
+        "knowledge:risk-methodology@sha256:a3f7794ef6d2"
+      ]
+    },
+    {
+      "ref": "knowledge:crosswalk@sha256:50af74fa485e",
+      "dependsOn": []
+    },
+    {
+      "ref": "knowledge:cyber-essentials@sha256:b433bcec49ea",
+      "dependsOn": []
+    },
+    {
+      "ref": "knowledge:evidence-standards@sha256:bdd5f5a9f94a",
+      "dependsOn": []
+    },
+    {
+      "ref": "knowledge:gdpr@sha256:02495f6e71d3",
+      "dependsOn": []
+    },
+    {
+      "ref": "knowledge:grc-workspace@sha256:4b23ab723982",
+      "dependsOn": []
+    },
+    {
+      "ref": "knowledge:iso27001@sha256:1a8807b3dba3",
+      "dependsOn": []
+    },
+    {
+      "ref": "knowledge:iso42001@sha256:bf4d1d0d5952",
+      "dependsOn": []
+    },
+    {
+      "ref": "knowledge:policy-catalogue@sha256:5e50d1f63415",
+      "dependsOn": []
+    },
+    {
+      "ref": "knowledge:risk-methodology@sha256:a3f7794ef6d2",
+      "dependsOn": []
+    },
+    {
+      "ref": "knowledge:soc2@sha256:59ce901e1fff",
+      "dependsOn": []
+    },
+    {
+      "ref": "knowledge:writing-standards@sha256:47872a0f90db",
+      "dependsOn": []
+    }
+  ]
+}
