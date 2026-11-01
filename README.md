@@ -33,7 +33,7 @@ Existing AI-BOMs describe models, datasets and MCP servers. At most they list a 
 
 ## Install
 
-Python 3.9+, no dependencies. Until a package is published, run it from a clone:
+Python 3.10+, no dependencies. Until a package is published, run it from a clone:
 
 ```sh
 git clone https://github.com/grcmana/skillbom && cd skillbom
