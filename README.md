@@ -1,6 +1,10 @@
+<p align="center">
+  <img src=".github/assets/banner.png" alt="SkillBOM: a bill of materials for the skills your agents run. Check installed skills with skillbom verify .claude/skills. CycloneDX 1.6, content hashed, signed releases, drift detection, open source." width="100%">
+</p>
+
 # SkillBOM
 
-**A nutrition label for agent skills.**
+**A bill of materials for the skills your agents run.**
 
 SkillBOM produces a verifiable bill of materials for [Agent Skills](https://agentskills.io): what's in each skill, what it was built from, and whether what you installed is what was released. It's a [CycloneDX 1.6](https://cyclonedx.org) profile plus a small CLI, so the output opens in the SBOM tooling you already use.
 
