@@ -80,11 +80,16 @@ skillbom check skillbom.cdx.json --policy policy.json --json
 
 ### Verify what you installed
 
+Save the publisher's `skillbom.cdx.json` next to your skills (e.g. `.claude/skillbom.cdx.json`), then:
+
 ```sh
-skillbom verify .claude/skills --bom skillbom.cdx.json
+skillbom verify .claude/skills
 ```
 
+It looks for `skillbom.cdx.json` in the skills folder, its parent, then the current folder. Pass `--bom <file>` to use a different file.
+
 ```
+using /home/me/project/.claude/skillbom.cdx.json
 MODIFIED      dpia
     added    scripts.sh
     changed  SKILL.md
@@ -115,9 +120,15 @@ To sign your own Skill BOM, add a step like this to your release workflow (needs
 
 [`examples/grcskills-v0.1.0.cdx.json`](examples/grcskills-v0.1.0.cdx.json) is the Skill BOM for [GRC Skills](https://github.com/grcmana/grcskills) v0.1.0: 11 skills sharing 11 knowledge files. CI regenerates it from the public release on every change and fails if a single byte differs.
 
-## Specification
+## Documentation
 
-[`SPEC.md`](SPEC.md) defines the profile: field mapping, the `skillbom:` property namespace, the hashing method (reproducible with `find`, `sort` and `sha256sum`), and the planned evidence model.
+| Doc | Read it if you want to |
+|---|---|
+| [How it works](docs/how-it-works.md) | Understand what a Skill BOM is, in plain English, with a worked example |
+| [User guide](docs/user-guide.md) | Publish a BOM for your skills, or check skills you've installed |
+| [Architecture](docs/architecture.md) | Understand the code, the design decisions and the threat model |
+| [Roadmap](docs/roadmap.md) | See what's planned |
+| [SPEC.md](SPEC.md) | Implement the profile yourself: fields, `skillbom:` properties, hashing method |
 
 ## Related work
 

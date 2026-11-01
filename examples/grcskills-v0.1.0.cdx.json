@@ -2395,11 +2395,11 @@
           "value": "2026-10-29"
         },
         {
-          "name": "skillbom:knowledge:scheme_version",
+          "name": "skillbom:knowledge:scheme-version",
           "value": "Requirements for IT Infrastructure v3.3, \"Danzell\" question set (for assessment accounts created from 27 April 2026)"
         },
         {
-          "name": "skillbom:knowledge:licence_note",
+          "name": "skillbom:knowledge:licence-note",
           "value": "Own-words summary. Always check the current requirements document and question set on the IASME/NCSC websites — the scheme updates annually (usually April)."
         }
       ]
@@ -2450,7 +2450,7 @@
           "value": "2026-10-29"
         },
         {
-          "name": "skillbom:knowledge:licence_note",
+          "name": "skillbom:knowledge:licence-note",
           "value": "GDPR is EU law; article references used. Not legal advice."
         }
       ]
@@ -2501,7 +2501,7 @@
           "value": "2026-10-29"
         },
         {
-          "name": "skillbom:knowledge:licence_note",
+          "name": "skillbom:knowledge:licence-note",
           "value": "Own-words summary. Clause/control IDs referenced; no standard text reproduced. Buy the standard from ISO or your national body (e.g. BSI) for formal work."
         }
       ]
@@ -2531,7 +2531,7 @@
           "value": "2026-10-29"
         },
         {
-          "name": "skillbom:knowledge:licence_note",
+          "name": "skillbom:knowledge:licence-note",
           "value": "Own-words summary. Clause/control IDs referenced; no standard text reproduced."
         }
       ]
@@ -2603,7 +2603,7 @@
           "value": "2026-10-29"
         },
         {
-          "name": "skillbom:knowledge:licence_note",
+          "name": "skillbom:knowledge:licence-note",
           "value": "Own-words summary. Criteria IDs referenced; AICPA text not reproduced."
         }
       ]

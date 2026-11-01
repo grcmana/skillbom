@@ -88,6 +88,22 @@ class GenerateTests(Base):
         self.assertEqual(props["skillbom:meta:maturity"], "experimental")
         self.assertEqual(bom["metadata"]["component"]["purl"], "pkg:github/example/fixture@v1.0.0")
 
+    def test_property_names_follow_spec(self) -> None:
+        import re
+        names = set()
+
+        def walk(c: dict) -> None:
+            names.update(p["name"] for p in c.get("properties", []))
+            for sub in c.get("components", []):
+                walk(sub)
+        bom = self.bom()
+        walk(bom["metadata"])
+        for c in bom["components"]:
+            walk(c)
+        bad = [n for n in names if not re.fullmatch(r"skillbom:[a-z0-9.-]+(:[a-z0-9.-]+)*", n)]
+        self.assertEqual(bad, [])
+        self.assertIn("skillbom:knowledge:licence-note", names)
+
     def test_shared_knowledge_deduplicated(self) -> None:
         bom = self.bom()
         packs = [c for c in bom["components"] if c["type"] == "data"]
@@ -197,6 +213,27 @@ class CliTests(Base):
         self.assertEqual(run_cli("verify", str(self.repo), "--bom", str(out), "--require-all")[0], 1)
         code, text = run_cli("check", str(out), "--json", "--today", "2026-11-01")
         self.assertTrue(json.loads(text)["ok"])
+
+    def test_verify_finds_bom(self) -> None:
+        import os
+        skills = self.repo / "skills"
+        text = generate.dumps(self.bom())
+        cwd = os.getcwd()
+        try:
+            os.chdir(self.tmp)
+            self.assertEqual(run_cli("verify", str(skills))[0], 2)  # nothing to find
+            (self.tmp / "skillbom.cdx.json").write_text(text)  # current folder
+            self.assertEqual(run_cli("verify", str(skills))[0], 0)
+            (self.tmp / "skillbom.cdx.json").unlink()
+            (self.repo / "skillbom.cdx.json").write_text(text)  # parent of skills folder
+            code, out = run_cli("verify", str(skills))
+            self.assertEqual(code, 0)
+            self.assertIn("using", out)
+            (self.repo / "skillbom.cdx.json").unlink()
+            (skills / "skillbom.cdx.json").write_text(text)  # inside the skills folder
+            self.assertEqual(run_cli("verify", str(skills))[0], 0)
+        finally:
+            os.chdir(cwd)
 
     def test_bad_input_exit_2(self) -> None:
         self.assertEqual(run_cli("generate", str(self.tmp / "missing"))[0], 2)

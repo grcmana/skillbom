@@ -42,7 +42,7 @@ def _license(value: str) -> list[dict[str, Any]]:
 
 
 def _key(s: str) -> str:
-    return re.sub(r"[^a-z0-9._-]+", "-", s.lower()).strip("-")
+    return re.sub(r"[^a-z0-9.-]+", "-", s.lower()).strip("-")
 
 
 def skill_component(s: Skill) -> dict[str, Any]:

@@ -59,8 +59,35 @@ def cmd_check(a: argparse.Namespace) -> int:
     return 1 if errors else 0
 
 
+BOM_FILENAME = "skillbom.cdx.json"
+
+
+def find_bom(skills_dir: Path) -> Path | None:
+    """Look for the conventional BOM file next to the skills: in the folder,
+    its parent, then the current directory. Never touches the network."""
+    seen = []
+    # A BOM placed inside a single skill's folder would itself count as drift,
+    # so only look inside skills_dir when it is a folder *of* skills.
+    first = [] if (skills_dir / "SKILL.md").is_file() else [skills_dir]
+    for d in (*first, skills_dir.resolve().parent, Path.cwd()):
+        cand = (d / BOM_FILENAME).resolve()
+        if cand not in seen:
+            seen.append(cand)
+            if cand.is_file():
+                return cand
+    return None
+
+
 def cmd_verify(a: argparse.Namespace) -> int:
-    bom = _load_bom(a.bom)
+    bom_path = Path(a.bom) if a.bom else find_bom(Path(a.path))
+    if bom_path is None:
+        return _err(
+            f"no {BOM_FILENAME} found in {a.path}, its parent folder or the current folder. "
+            "Download the BOM from the skills' release and save it there, or pass --bom <file>."
+        )
+    if not a.bom and not a.json:
+        print(f"using {bom_path}", file=sys.stderr)
+    bom = _load_bom(str(bom_path))
     installed = load_skills(Path(a.path))
     if not installed:
         return _err(f"no SKILL.md files found under {a.path}")
@@ -106,7 +133,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     v = sub.add_parser("verify", help="compare installed skills against a Skill BOM")
     v.add_argument("path", help="directory of installed skills, e.g. .claude/skills")
-    v.add_argument("--bom", required=True, help="path to the released Skill BOM")
+    v.add_argument("--bom", help=f"path to the released Skill BOM (default: find {BOM_FILENAME} "
+                                  "in the skills folder, its parent, or the current folder)")
     v.add_argument("--require-all", action="store_true", help="fail if any skill in the BOM is not installed")
     v.add_argument("--json", action="store_true", help="machine-readable output")
     v.set_defaults(func=cmd_verify)

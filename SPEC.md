@@ -116,11 +116,15 @@ find . -type f ! -name .DS_Store ! -name Thumbs.db ! -name '*.pyc' \
 ### 5.3 Aggregate hash
 SHA-256 over lines `<skill hash><two spaces><skill name>\n`, sorted by the UTF-8 bytes of the name. Stored on `metadata.component`.
 
-## 6. Signing
+## 6. Publishing
+
+Publishers SHOULD name the file `skillbom.cdx.json` and attach it to each release of their skills. Consumers SHOULD save it next to their installed skills (for example `.claude/skillbom.cdx.json` beside `.claude/skills/`), where tools can find it without configuration. It MUST NOT be placed inside an individual skill's folder, because it would then count as part of that skill's content.
+
+## 7. Signing
 
 The profile doesn't embed signatures. Publishers SHOULD sign the BOM file with a detached, keyless attestation, for example GitHub artifact attestations (Sigstore-backed), so consumers can check it with `gh attestation verify`. Key management inside the BOM (CycloneDX JSF) is out of scope for 0.1.
 
-## 7. Evidence (reserved for profile 0.2)
+## 8. Evidence (reserved for profile 0.2)
 
 Planned, not yet emitted:
 
@@ -129,7 +133,7 @@ Planned, not yet emitted:
 - **How it was produced** in `formulation`: harness, model and version, number of runs, date.
 - **Maturity** (`experimental` / `evaluated` / `field-tested`), already passed through today as `skillbom:meta:maturity` when a skill declares it.
 
-## 8. Conformance checks
+## 9. Conformance checks
 
 The reference `skillbom check` applies these rules. Severity is set by policy (`error`, `warn` or `off`).
 
@@ -144,11 +148,11 @@ The reference `skillbom check` applies these rules. Severity is set by policy (`
 | `required-metadata` | error | A listed metadata key is missing (default: `author`) |
 | `knowledge-freshness` | warn | An `as-of` date is older than `max_age_days` (default 183) |
 
-## 9. Versioning of this profile
+## 10. Versioning of this profile
 
 `skillbom:profile` changes MINOR when fields are added and MAJOR when a field changes meaning or the hash method changes. A change of hash method gets a new `skillbom:hash-method` value; existing values are never redefined.
 
-## 10. Related work
+## 11. Related work
 
 - **CycloneDX ML-BOM / AI-BOM** and **SPDX 3.0 AI profile** describe models, datasets and services.
 - **OWASP AOS AgBOM** (work in progress) describes agents, tools and their configuration.
