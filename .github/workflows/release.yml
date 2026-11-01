@@ -1,6 +1,7 @@
 name: release
 
-# Runs when a maintainer pushes a v* tag (tag creation is admin-only).
+# Runs when a v* tag is created (admin-only): either by publishing a release
+# in the GitHub UI, or by pushing the tag.
 # Builds the package, regenerates the example BOM, signs everything with
 # keyless GitHub artifact attestations (Sigstore), and publishes a release.
 
@@ -27,7 +28,7 @@ jobs:
           ref: v0.1.0
           path: _grcskills
           fetch-depth: 1
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
 
@@ -65,5 +66,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "${GITHUB_REF_NAME}" dist/* \
-            --title "${GITHUB_REF_NAME}" --generate-notes --prerelease
+          # Works whether the maintainer published the release in the GitHub UI
+          # (which creates the tag) or pushed the tag from the command line.
+          gh release view "${GITHUB_REF_NAME}" >/dev/null 2>&1 || \
+            gh release create "${GITHUB_REF_NAME}" --title "SkillBOM ${GITHUB_REF_NAME}" \
+              --generate-notes --prerelease --verify-tag
+          gh release upload "${GITHUB_REF_NAME}" dist/* --clobber

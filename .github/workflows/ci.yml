@@ -17,7 +17,7 @@ jobs:
         python: ["3.10", "3.13"]
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python }}
       - name: Install schema validator (tests only; the tool itself has no dependencies)
@@ -37,7 +37,7 @@ jobs:
           ref: v0.1.0
           path: _grcskills
           fetch-depth: 1
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
       - run: pip install "cyclonedx-python-lib[json-validation]>=8"
